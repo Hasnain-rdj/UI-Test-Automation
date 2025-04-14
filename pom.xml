@@ -1,0 +1,110 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.sqe.project</groupId>
+  <artifactId>ui-test-automation</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>ui-test-automation</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+  <!-- Selenium -->
+  <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.7.0</version>
+  </dependency>
+  
+  <!-- Cucumber -->
+  <dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>7.3.0</version>
+  </dependency>
+
+  <!-- Allure -->
+  <dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-cucumber7-jvm</artifactId>
+    <version>2.18.1</version>
+  </dependency>
+
+  <!-- Excel -->
+  <dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>5.2.2</version>
+  </dependency>
+
+  <!-- Redis -->
+  <dependency>
+    <groupId>redis.clients</groupId>
+    <artifactId>jedis</artifactId>
+    <version>4.2.0</version>
+  </dependency>
+
+    <!-- Cucumber JUnit -->
+    <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-junit</artifactId>
+        <version>7.3.0</version>
+        <scope>test</scope>
+    </dependency>
+
+    <!-- JUnit -->
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.13.2</version>
+        <scope>test</scope>
+    </dependency>
+    
+    <!-- Allure Cucumber-JVM integration -->
+    <dependency>
+        <groupId>io.qameta.allure</groupId>
+        <artifactId>allure-cucumber6-jvm</artifactId>
+        <version>2.18.1</version> <!-- Make sure the version is up-to-date -->
+    </dependency>
+
+    <!-- Allure TestNG integration (optional, if you're using TestNG) -->
+    <dependency>
+        <groupId>io.qameta.allure</groupId>
+        <artifactId>allure-testng</artifactId>
+        <version>2.18.1</version>
+    </dependency>
+
+    <!-- Allure JUnit integration (if you're using JUnit) -->
+    <dependency>
+        <groupId>io.qameta.allure</groupId>
+        <artifactId>allure-junit5</artifactId>
+        <version>2.18.1</version>
+    </dependency>
+    
+    <dependency>
+    <groupId>org.mariadb.jdbc</groupId>
+    <artifactId>mariadb-java-client</artifactId>
+    <version>3.0.6</version>
+</dependency>
+
+</dependencies>
+
+<build>
+    <plugins>
+        <!-- Allure Maven plugin for report generation -->
+        <plugin>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-maven</artifactId>
+            <version>2.11.2</version>
+        </plugin>
+    </plugins>
+</build>
+
+
+</project>
